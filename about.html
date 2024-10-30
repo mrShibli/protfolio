@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DataAutomators</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .sidebar {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 mx-auto max-w-[2000px]">
+
+    <header class="flex justify-between items-center p-6 border-b border-gray-200">
+        <div class="text-xl font-bold">
+            <a href="index.html">
+                <span class="text-gray-900">Data</span><span class="text-blue-500">Automators</span>
+            </a>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+            <a class="text-gray-600 hover:text-gray-800" href="about.html">About</a>
+            <a class="text-gray-600 hover:text-gray-800" href="#">Contact</a>
+            <a class="text-gray-600 hover:text-gray-800" href="#">ScrapeAutomate
+                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded-full">NEW</span>
+            </a>
+        </nav>
+        <button class="md:hidden text-gray-600 hover:text-gray-900" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+
+
+
+    <div id="sidebar" class="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 sidebar">
+        <div class="flex justify-end p-6">
+            <button class="text-white" onclick="toggleSidebar()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center space-y-6 mt-10">
+            <a class="text-white text-lg" href="about.html">About</a>
+            <a class="text-white text-lg" href="#">Contact</a>
+            <a class="text-white text-lg" href="#">ScrapeAutomate <span
+                    class="bg-purple-500 text-white text-xs px-2 py-1 rounded-full">NEW</span></a>
+        </nav>
+    </div>
+
+    <main id="about" class="max-w-4xl mx-auto py-16 px-4">
+        <h1 class="text-4xl font-bold text-center mb-4">
+            About DataAutomators
+        </h1>
+        <p class="text-center text-lg text-gray-600 mb-12">
+            We are a small passionate team.
+        </p>
+        <section class="text-center mb-16">
+            <h2 class="text-2xl font-bold mb-4">
+                Empowering Your Business with Web Automation
+            </h2>
+            <p class="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                Hailing from
+                <span class="font-bold">
+                    Bangladesh
+                </span>
+                , our diverse team brings a wealth of unique perspectives, experiences, and skills to the table,
+                fostering an environment of innovation and creativity. Our mission is to empower companies with the
+                ability to collect clean, insightful data seamlessly, without the constraints of bottlenecks or
+                limitations. We understand the challenges of navigating the ever-evolving digital landscape, and our
+                tool is designed to streamline the process of automating web interactions and data extraction.
+            </p>
+        </section>
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+                <img alt="Portrait of Abu Taher" class="w-32 h-32 rounded-full mx-auto mb-4" height="150"
+                    src="https://storage.googleapis.com/a1aa/image/p1EHmygH0QahBFEGEdv5l2xe0zgIV1eVwcjj0RyYfQdWpwXnA.jpg"
+                    width="150" />
+                <h3 class="text-lg font-bold">
+                    Abu Taher
+                </h3>
+                <p class="text-gray-600">
+                    Co-Founder
+                </p>
+            </div>
+            <div class="text-center">
+                <img alt="Portrait of Sad-bin Alam" class="w-32 h-32 rounded-full mx-auto mb-4" height="150"
+                    src="https://storage.googleapis.com/a1aa/image/4GuZEeV8mRWSMCrGMKT72ZolsQJZF8dfcYAcjtCPt79sU4rTA.jpg"
+                    width="150" />
+                <h3 class="text-lg font-bold">
+                    Sad-bin Alam
+                </h3>
+                <p class="text-gray-600">
+                    Co-Founder
+                </p>
+            </div>
+            <div class="text-center">
+                <img alt="Portrait of Zahid Hasan" class="w-32 h-32 rounded-full mx-auto mb-4" height="150"
+                    src="https://storage.googleapis.com/a1aa/image/NQjrm1Q8VBYaC9jtJFIX2D5xxf8KLTqHTFUCgegrHxbqU4rTA.jpg"
+                    width="150" />
+                <h3 class="text-lg font-bold">
+                    Zahid Hasan
+                </h3>
+                <p class="text-gray-600">
+                    Junior Developer
+                </p>
+            </div>
+            <div class="text-center">
+                <img alt="Portrait of Abdur Rahman Talha" class="w-32 h-32 rounded-full mx-auto mb-4" height="150"
+                    src="https://storage.googleapis.com/a1aa/image/ZuqR7n4ZsIYoKFVoUa5kvk7pGF3eMLfycI72NbefPe23lCf6E.jpg"
+                    width="150" />
+                <h3 class="text-lg font-bold">
+                    Abdur Rahman Talha
+                </h3>
+                <p class="text-gray-600">
+                    Junior Developer
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="text-center py-6 text-gray-600">
+        <p>Copyright © 2024 DataAutomators. All rights reserved.</p>
+        <p>Astroship Template by Web3Templates</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+
+</body>
+
+</html>
