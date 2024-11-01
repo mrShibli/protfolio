@@ -20,6 +20,24 @@
         .sidebar.open {
             transform: translateX(0);
         }
+
+
+        .d-logo {
+            top: 9px;
+            right: 10px;
+        }
+
+        .bg-18bd6f{
+            background-color: #18bd6f;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .butto-w{
+            width: 200px;
+            margin: auto;
+        }
     </style>
 </head>
 
@@ -34,15 +52,14 @@
         <nav class="hidden md:flex space-x-6">
             <a class="text-gray-600 hover:text-gray-800" href="about.html">About</a>
             <a class="text-gray-600 hover:text-gray-800" href="#">Contact</a>
-            <a class="text-gray-600 hover:text-gray-800" href="#">ScrapeAutomate 
-                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded-full">NEW</span>
+            <a class="text-gray-600 hover:text-gray-800" href="service.html">Services
             </a>
         </nav>
         <button class="md:hidden text-gray-600 hover:text-gray-900" onclick="toggleSidebar()">
             <i class="fas fa-bars"></i>
         </button>
     </header>
-    
+
 
 
 
@@ -55,21 +72,23 @@
         <nav class="flex flex-col items-center space-y-6 mt-10">
             <a class="text-white text-lg" href="about.html">About</a>
             <a class="text-white text-lg" href="#">Contact</a>
-            <a class="text-white text-lg" href="#">ScrapeAutomate <span
-                    class="bg-purple-500 text-white text-xs px-2 py-1 rounded-full">NEW</span></a>
+            <a class="text-white text-lg" href="service.html">Services </a>
         </nav>
     </div>
 
     <main class="px-6">
-        <section class="text-center my-16">
+        <section class="text-center my-16 bg-18bd6f p-6 text-white">
             <h1 class="text-5xl font-bold mb-4">We Automate The Web For You</h1>
-            <p class="text-lg text-gray-600 mb-8">We specialize in web scraping, turning the vast amounts of data
-                available online into actionable insights for your business. Allow our specialists to manage your task,
-                no matter the size or complexity.</p>
-            <button class="bg-black text-white px-6 py-3 rounded-lg">Schedule a Call</button>
+            <p class="text-lg text-gray-600 my-10  text-white">We are an advanced Software Development Company that creates and transforms products to endeavor growth. We like to go deep into your business to deliver the Excellence that your business actually needs. You can capture the full value of tech with us.</p>
+            <a class="bg-black butto-w relative text-white px-12 py-3 rounded-lg">
+                Contact With
+                <img class="d-inline d-logo absolute  w-7 h-7"
+                    src="https://fiverr-res.cloudinary.com/npm-assets/layout-service/favicon.52df53a.ico" alt=""
+                    srcset="">
+            </a>
         </section>
         <section class="flex justify-center mb-16">
-            <img alt="Illustration of a person working on web automation" class="w-1/2" height="400"
+            <img alt="Illustration of a person working on web automation" class="w-1/2 rounded-md" height="400"
                 src="https://storage.googleapis.com/a1aa/image/GmoHG5gBpfwjcy0ORZZMRRS8UuG7NUsRM8foZurk0NkZO4rTA.jpg"
                 width="600" />
         </section>
@@ -144,7 +163,7 @@
             <button class="bg-white text-black px-6 py-3 rounded-lg">Get A Quote</button>
         </section>
     </main>
-    
+
     <footer class="text-center py-6 text-gray-600">
         <p>Copyright © 2024 DataAutomators. All rights reserved.</p>
         <p>Astroship Template by Web3Templates</p>
