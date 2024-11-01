@@ -10,6 +10,35 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .animate-float, .animate-fade-in-up, .animate-pulse {
+                animation: none;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -20,9 +49,9 @@
                     Tech<span class="text-blue-600">Solutions</span>
                 </div>
                 <div class="hidden md:flex space-x-4">
-                    <a href="#home" class="text-gray-800 hover:text-blue-600">Home</a>
-                    <a href="#services" class="text-gray-800 hover:text-blue-600">Services</a>
-                    <a href="#contact" class="text-gray-800 hover:text-blue-600">Contact</a>
+                    <a href="#home" class="text-gray-800 hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="#services" class="text-gray-800 hover:text-blue-600 transition duration-300">Services</a>
+                    <a href="#contact" class="text-gray-800 hover:text-blue-600 transition duration-300">Contact</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-gray-800 hover:text-blue-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -41,16 +70,16 @@
     <main>
         <section id="home" class="bg-blue-600 text-white py-20">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Your Full-Stack Development Partner</h1>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-float">Your Full-Stack Development Partner</h1>
                 <p class="text-xl mb-8">We bring your digital ideas to life with cutting-edge technology solutions</p>
-                <a href="#contact" class="bg-white text-blue-600 py-2 px-6 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300">Get Started</a>
+                <a href="#contact" class="bg-white text-blue-600 py-2 px-6 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 animate-pulse">Get Started</a>
             </div>
         </section>
 
         <section id="services" class="py-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
                     <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
                         <h3 class="text-xl font-semibold mb-4">App Development</h3>
                         <p>Custom mobile and desktop applications tailored to your specific needs.</p>
@@ -118,6 +147,45 @@
     <script>
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Animate services on scroll
+        function animateServicesOnScroll() {
+            const services = document.querySelectorAll('#services-grid > div');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('animate-fade-in-up');
+                        }, index * 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            services.forEach(service => observer.observe(service));
+        }
+
+        // Typing effect for the main title
+        function typeWriter(element, text, speed) {
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Run animations when the page loads
+        window.addEventListener('load', () => {
+            animateServicesOnScroll();
+            const mainTitle = document.querySelector('#home h1');
+            const originalText = mainTitle.textContent;
+            mainTitle.textContent = '';
+            typeWriter(mainTitle, originalText, 100);
         });
     </script>
 </body>
