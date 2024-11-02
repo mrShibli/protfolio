@@ -54,21 +54,23 @@
 
 <body class="bg-white text-gray-900 mx-auto max-w-[2000px]">
 
-    <header class="flex justify-between items-center p-6 border-b border-gray-200">
-        <div class="text-xl font-bold">
-            <a href="index.html">
-                <span class="text-gray-900">Crft</span><span class="text-blue-500">Byte</span>
-            </a>
+    <header class="p-6 border-b border-gray-200">
+        <div class="flex justify-between items-center mx-auto max-w-[1250px]">
+            <div class="text-xl font-bold">
+                <a href="index.html">
+                    <span class="text-gray-900">Crft</span><span class="text-blue-500">Byte</span>
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a class="text-gray-600 hover:text-gray-800" href="about.html">About</a>
+                <!-- <a class="text-gray-600 hover:text-gray-800" href="#">Contact</a> -->
+                <a class="text-gray-600 hover:text-gray-800" href="service.html">Services
+                </a>
+            </nav>
+            <button class="md:hidden text-gray-600 hover:text-gray-900" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <nav class="hidden md:flex space-x-6">
-            <a class="text-gray-600 hover:text-gray-800" href="about.html">About</a>
-            <!-- <a class="text-gray-600 hover:text-gray-800" href="#">Contact</a> -->
-            <a class="text-gray-600 hover:text-gray-800" href="service.html">Services
-            </a>
-        </nav>
-        <button class="md:hidden text-gray-600 hover:text-gray-900" onclick="toggleSidebar()">
-            <i class="fas fa-bars"></i>
-        </button>
     </header>
 
 
@@ -89,22 +91,27 @@
 
     <!-- Header Section -->
     <div class="bg-green-500 text-white text-center py-8">
-        <h1 class="text-3xl font-bold">
-            We Develop Your Web Salutation
-        </h1>
-        <p class="mt-4">
-            We are an advanced Software Development Company that creates and transforms products to endeavor growth. We
-            like to go deep into your business to deliver the Excellence that your business actually needs. You can
-            capture the full value of tech with us.
-        </p>
-        <button class="mt-6 bg-black relative text-white py-2 px-4 rounded-full flex items-center mx-auto">
-            <span class="mr-2">
-                Contact With
-            </span>
-            <img class="w-7 h-7"
-                src="https://fiverr-res.cloudinary.com/npm-assets/layout-service/favicon.52df53a.ico" alt="" srcset="">
+        <div class="mx-auto max-w-[1250px]">
+
+            <h1 class="text-3xl font-bold">
+                We Develop Your Web Salutation
+            </h1>
+            <p class="mt-4">
+                We are an advanced Software Development Company that creates and transforms products to endeavor growth.
+                We
+                like to go deep into your business to deliver the Excellence that your business actually needs. You can
+                capture the full value of tech with us.
+                </p>
+                <button class="mt-6 bg-black relative text-white py-2 px-4 rounded-full flex items-center mx-auto">
+                    <span class="mr-2">
+                        Contact With
+                    </span>
+                    <img class="w-7 h-7"
+                    src="https://fiverr-res.cloudinary.com/npm-assets/layout-service/favicon.52df53a.ico" alt=""
+                    srcset="">
                 <span class="absolute">upcoming</span>
-        </button>
+            </button>
+        </div>
     </div>
     <!-- Main Image Section -->
     <div class="flex justify-center my-8">
@@ -114,31 +121,33 @@
             width="800" />
     </div>
     <!-- Main Content Section -->
-    <div class="text-center px-4">
-        <h2 class="text-xl font-bold">
-            Say Hello to Full Web Salutation
-        </h2>
-        <p class="text-5xl mt-4">
-            Take a load off your shoulders with our Development Team. We're all about making your online tasks
-            smoother...
-        </p>
-    </div>
-    <!-- Technologies Section -->
-    <div class="text-center my-10">
-        <h3 class="text-lg font-bold">
-            Technologies we work with
-        </h3>
-        <div class="flex justify-center space-x-4 mt-4">
-            <i class="fab fa-react text-3xl"></i>
-            <i class="fab fa-vuejs text-3xl"></i>
-            <i class="fab fa-angular text-3xl"></i>
-            <i class="fab fa-node text-3xl"></i>
-            <i class="fab fa-laravel text-3xl"></i>
-            <i class="fab fa-php text-3xl"></i>
-            <i class="fab fa-js text-3xl"></i>
-            <i class="fab fa-docker text-3xl"></i>
-        </div>
-    </div>
+    <section class="mx-auto max-w-[1250px]">
+        <div class="text-center px-4">
+            <h2 class="text-xl font-bold">
+                Say Hello to Full Web Salutation
+            </h2>
+            <p class="text-2xl mt-4">
+                Take a load off your shoulders with our Development Team. We're all about making your online tasks
+                smoother...
+            </p>
+            </div>
+            <!-- Technologies Section -->
+            <div class="text-center my-10">
+                <h3 class="text-lg font-bold">
+                    Technologies we work with
+                </h3>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <i class="fab fa-react text-3xl"></i>
+                    <i class="fab fa-vuejs text-3xl"></i>
+                    <i class="fab fa-angular text-3xl"></i>
+                    <i class="fab fa-node text-3xl"></i>
+                    <i class="fab fa-laravel text-3xl"></i>
+                    <i class="fab fa-php text-3xl"></i>
+                    <i class="fab fa-js text-3xl"></i>
+                    <i class="fab fa-docker text-3xl"></i>
+                </div>
+            </div>
+    </section>
     <!-- Footer Section -->
     <div class="bg-black text-white text-center py-8">
         <h4 class="text-xl font-bold">

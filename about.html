@@ -25,25 +25,25 @@
 
 <body class="bg-white text-gray-900 mx-auto max-w-[2000px]">
 
-    <header class="flex justify-between items-center p-6 border-b border-gray-200">
-        <div class="text-xl font-bold">
-            <a href="index.html">
-                <span class="text-gray-900">Crft</span><span class="text-blue-500">Byte</span>
-            </a>
+    <header class="p-6 border-b border-gray-200">
+        <div class="flex justify-between items-center mx-auto max-w-[1250px]">
+
+            <div class="text-xl font-bold">
+                <a href="index.html">
+                    <span class="text-gray-900">Crft</span><span class="text-blue-500">Byte</span>
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a class="text-gray-600 hover:text-gray-800" href="about.html">About</a>
+                <!-- <a class="text-gray-600 hover:text-gray-800" href="#">Contact</a> -->
+                <a class="text-gray-600 hover:text-gray-800" href="service.html">Services
+                </a>
+            </nav>
+            <button class="md:hidden text-gray-600 hover:text-gray-900" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <nav class="hidden md:flex space-x-6">
-            <a class="text-gray-600 hover:text-gray-800" href="about.html">About</a>
-            <!-- <a class="text-gray-600 hover:text-gray-800" href="#">Contact</a> -->
-            <a class="text-gray-600 hover:text-gray-800" href="service.html">Services
-            </a>
-        </nav>
-        <button class="md:hidden text-gray-600 hover:text-gray-900" onclick="toggleSidebar()">
-            <i class="fas fa-bars"></i>
-        </button>
     </header>
-
-
-
 
     <div id="sidebar" class="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 sidebar">
         <div class="flex justify-end p-6">
@@ -74,14 +74,18 @@
                 <span class="font-bold">
                     Bangladesh
                 </span>
-                 Bangladesh, our agency brings together a team of skilled developers passionate about delivering exceptional digital experiences. With a focus on innovation and quality, we empower businesses to establish a strong online presence through customized, reliable, and user-centered web solutions. Our mission is to streamline the web development process, ensuring seamless functionality and aesthetic appeal in every project. By staying ahead in the ever-evolving tech landscape, we equip our clients with the tools they need to thrive in a competitive digital world.
+                Bangladesh, our agency brings together a team of skilled developers passionate about delivering
+                exceptional digital experiences. With a focus on innovation and quality, we empower businesses to
+                establish a strong online presence through customized, reliable, and user-centered web solutions. Our
+                mission is to streamline the web development process, ensuring seamless functionality and aesthetic
+                appeal in every project. By staying ahead in the ever-evolving tech landscape, we equip our clients with
+                the tools they need to thrive in a competitive digital world.
             </p>
         </section>
-        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
             <div class="text-center">
-                <img style="object-fit: cover" alt="Shibli Raihan" class="w-32 h-32 rounded-full mx-auto mb-4" height="150"
-                    src="./enh.png"
-                    width="150" />
+                <img style="object-fit: cover" alt="Shibli Raihan" class="w-32 h-32 rounded-full mx-auto mb-4"
+                    height="150" src="./enh.png" width="150" />
                 <h3 class="text-lg font-bold">
                     Shibli Raihan
                 </h3>
@@ -91,8 +95,7 @@
             </div>
             <div class="text-center">
                 <img alt="Naimul Islam" class="w-32 h-32 rounded-full mx-auto mb-4" height="150"
-                    src="./default_cover_image.jpg"
-                    width="150" />
+                    src="./mine.jpg" width="150" />
                 <h3 class="text-lg font-bold">
                     Naimul Islam
                 </h3>
@@ -112,9 +115,9 @@
     </section>
 
 
-<footer class="text-center py-6 text-gray-600">
-    <p>Copyright © 2024 Crftbyte. All rights reserved.</p>
-</footer>
+    <footer class="text-center py-6 text-gray-600">
+        <p>Copyright © 2024 Crftbyte. All rights reserved.</p>
+    </footer>
 
     <script>
         function toggleSidebar() {
