@@ -27,16 +27,27 @@
             right: 10px;
         }
 
-        .bg-18bd6f{
+        .bg-18bd6f {
             background-color: #18bd6f;
             height: 400px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .butto-w{
+
+        .butto-w {
             width: 200px;
             margin: auto;
+        }
+
+        span.absolute {
+            top: -17px;
+            background: red;
+            padding: 4px;
+            border-radius: 10px;
+            rotate: 22deg;
+            right: -19px;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -76,101 +87,77 @@
         </nav>
     </div>
 
-    <main class="px-6">
-        <section class="text-center my-16 bg-18bd6f p-6 text-white">
-            <h1 class="text-5xl font-bold mb-4">We Automate The Web For You</h1>
-            <p class="text-lg text-gray-600 my-10  text-white">We are an advanced Software Development Company that creates and transforms products to endeavor growth. We like to go deep into your business to deliver the Excellence that your business actually needs. You can capture the full value of tech with us.</p>
-            <a class="bg-black butto-w relative text-white px-12 py-3 rounded-lg">
+    <!-- Header Section -->
+    <div class="bg-green-500 text-white text-center py-8">
+        <h1 class="text-3xl font-bold">
+            We Develop Your Web Salutation
+        </h1>
+        <p class="mt-4">
+            We are an advanced Software Development Company that creates and transforms products to endeavor growth. We
+            like to go deep into your business to deliver the Excellence that your business actually needs. You can
+            capture the full value of tech with us.
+        </p>
+        <button class="mt-6 bg-black relative text-white py-2 px-4 rounded-full flex items-center mx-auto">
+            <span class="mr-2">
                 Contact With
-                <img class="d-inline d-logo absolute  w-7 h-7"
-                    src="https://fiverr-res.cloudinary.com/npm-assets/layout-service/favicon.52df53a.ico" alt=""
-                    srcset="">
-            </a>
-        </section>
-        <section class="flex justify-center mb-16">
-            <img alt="Illustration of a person working on web automation" class="w-1/2 rounded-md" height="400"
-                src="https://storage.googleapis.com/a1aa/image/GmoHG5gBpfwjcy0ORZZMRRS8UuG7NUsRM8foZurk0NkZO4rTA.jpg"
-                width="600" />
-        </section>
-        <section class="text-center">
-            <h2 class="text-3xl font-bold mb-4">Say Hello to Full Web Salutation</h2>
-            <p class="text-8xl text-gray-600 mb-28">Take a load off your shoulders with our Development Team.
-                We're all about making your online tasks smoother...</p>
-            <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-left">
-                    <h3 class="text-xl font-bold mb-2">Data Aggregation For E-commerce</h3>
-                    <p class="text-gray-600">Scrape product details, prices, and reviews from multiple e-commerce
-                        websites to aggregate and compare data.</p>
-                </div>
-                <div class="text-left">
-                    <h3 class="text-xl font-bold mb-2">Job Board Scraper</h3>
-                    <p class="text-gray-600">Create a tool to scrape job postings from various job boards based on
-                        specific criteria.</p>
-                </div>
-                <div class="text-left">
-                    <h3 class="text-xl font-bold mb-2">Social Media Analytics</h3>
-                    <p class="text-gray-600">Scrape data from social media platforms to analyze trends, engagement, and
-                        user sentiment.</p>
-                </div>
-                <div class="text-left">
-                    <h3 class="text-xl font-bold mb-2">Real Estate Listings Tracker</h3>
-                    <p class="text-gray-600">Build a scraper to extract real estate listings, including property details
-                        and prices, from different websites.</p>
-                </div>
-                <div class="text-left">
-                    <h3 class="text-xl font-bold mb-2">Travel Deal Finder</h3>
-                    <p class="text-gray-600">Scrape travel websites for flight and hotel deals. Provide users with
-                        notifications for significant discounts or special offers.</p>
-                </div>
-                <div class="text-left">
-                    <h3 class="text-xl font-bold mb-2">Stock Market Data Tracker</h3>
-                    <p class="text-gray-600">Scrape financial data, stock prices, and news related to specific stocks.
-                        Implement alerts for significant market events or price changes.</p>
-                </div>
-                <div class="text-left">
-                    <h3 class="text-xl font-bold mb-2">Content Aggregator</h3>
-                    <p class="text-gray-600">Scrape articles and blog posts from different sources based on user
-                        preferences. Present the aggregated content in a personalized feed.</p>
-                </div>
-                <div class="text-left">
-                    <h3 class="text-xl font-bold mb-2">Price Monitoring for Competitor Analysis</h3>
-                    <p class="text-gray-600">Monitor prices of specific products/services offered by competitors, and
-                        generate reports to analyze pricing strategies over time.</p>
-                </div>
-                <div class="text-left">
-                    <h3 class="text-xl font-bold mb-2">Automated Testing for Websites</h3>
-                    <p class="text-gray-600">Use tools like Playwright or Puppeteer to automate testing of website
-                        functionalities.</p>
-                </div>
-            </div> -->
-        </section>
-        <section class="text-center mb-16">
-            <h2 class="text-xl font-extrabold my-4">Technologies we work with</h2>
-            <div class="flex justify-center space-x-8">
-                <i class="fab fa-react text-6xl"></i>
-                <i class="fab fa-vuejs text-6xl"></i>
-                <i class="fab fa-angular text-6xl"></i>
-                <i class="fab fa-node text-6xl"></i>
-                <i class="fab fa-laravel text-6xl"></i>
-                <i class="fab fa-php text-6xl"></i>
-                <i class="fab fa-js text-6xl"></i>
-                <i class="fab fa-docker text-6xl"></i>
-            </div>
-        </section>
+            </span>
+            <img class="w-7 h-7"
+                src="https://fiverr-res.cloudinary.com/npm-assets/layout-service/favicon.52df53a.ico" alt="" srcset="">
+                <span class="absolute">upcoming</span>
+        </button>
+    </div>
+    <!-- Main Image Section -->
+    <div class="flex justify-center my-8">
+        <img alt="Illustration of a person working on web automation with various tech devices"
+            class="rounded-lg shadow-lg" height="600"
+            src="https://storage.googleapis.com/a1aa/image/iOsbjRstygqyEBxiSQ9Nnzb1ZQMpyHywLbXpyGBgyKE2iO7E.jpg"
+            width="800" />
+    </div>
+    <!-- Main Content Section -->
+    <div class="text-center px-4">
+        <h2 class="text-xl font-bold">
+            Say Hello to Full Web Salutation
+        </h2>
+        <p class="text-5xl mt-4">
+            Take a load off your shoulders with our Development Team. We're all about making your online tasks
+            smoother...
+        </p>
+    </div>
+    <!-- Technologies Section -->
+    <div class="text-center my-10">
+        <h3 class="text-lg font-bold">
+            Technologies we work with
+        </h3>
+        <div class="flex justify-center space-x-4 mt-4">
+            <i class="fab fa-react text-3xl"></i>
+            <i class="fab fa-vuejs text-3xl"></i>
+            <i class="fab fa-angular text-3xl"></i>
+            <i class="fab fa-node text-3xl"></i>
+            <i class="fab fa-laravel text-3xl"></i>
+            <i class="fab fa-php text-3xl"></i>
+            <i class="fab fa-js text-3xl"></i>
+            <i class="fab fa-docker text-3xl"></i>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <div class="bg-black text-white text-center py-8">
+        <h4 class="text-xl font-bold">
+            Build better workflows!
+        </h4>
+        <p class="mt-4">
+            Optimize Your Workflow with Custom Web Development Solutions – Save Your Business!
+        </p>
+        <!-- <button class="mt-6 bg-white text-black py-2 px-4 rounded-full">
+            Get A Touch
+        </button> -->
+    </div>
+    <!-- Copyright Section -->
+    <div class="text-center py-4">
+        <p class="text-gray-500">
+            Copyright © 2024 Crthybz. All rights reserved.
+        </p>
+    </div>
 
-        <section class="bg-black text-white text-center py-16">
-            <h2 class="text-3xl font-bold mb-4">Build better workflows!</h2>
-            <p class="text-lg mb-8">
-                Optimize Your Workflow with Custom Web Development Solutions – Save Your Business!
-            </p>
-            <button class="bg-white text-black px-6 py-3 rounded-lg">Get A Touch</button>
-        </section>
-
-    </main>
-
-    <footer class="text-center py-6 text-gray-600">
-        <p>Copyright © 2024 Crftbyte. All rights reserved.</p>
-    </footer>
 
     <script>
         function toggleSidebar() {
